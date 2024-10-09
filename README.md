@@ -1,6 +1,7 @@
 # LangChain with Streamlit
-
 A quick way to spin up generative AI applications using open-source Python libraries.
+
+![image](https://github.com/user-attachments/assets/0f6fedea-1445-4d6e-b6b0-aef796eb4a81)
 
 ## References
 
@@ -17,3 +18,6 @@ A quick way to spin up generative AI applications using open-source Python libra
 
 - [Ollama](https://github.com/ollama/ollama)
   - *A platform for running large language models locally and managing them with ease.*
+
+
+
