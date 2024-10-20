@@ -4,7 +4,9 @@ from langchain_core.prompts import ChatPromptTemplate
 
 st.title(":robot_face:🔗 TaraBot")
 st.caption(":green[A LangChain App by Tara]")
-st.caption("Remember, any AI model may give false or inaccurate information.")
+st.caption("Remember, every AI model gives false or inaccurate information sometimes.")
+
+zone = "USDA Agricultural Zone 8b"
 
 def generate_response(input_text):
    # llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
@@ -16,8 +18,10 @@ def generate_response(input_text):
     )
    
    #System message to guide AI behavior
-   sysmsg = "You are a helpful and cheerful assistant."
-   messages = [("system", sysmsg),("human", input_text)]
+   messages = [
+       ("system", "You are a helpful expert gardener in {zone}"),
+       ("human", input_text)
+       ]
    chat_message = llm.invoke(messages)
    st.success(chat_message.content)
    #st.info(chat_message.response_metadata)
